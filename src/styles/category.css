@@ -1,0 +1,71 @@
+.cards {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 4rem;
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    top: 0;
+  
+}
+.card {
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0px 6px 10px rgba(38, 38, 38, 0.8);
+}
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(38, 38, 38, 0.8);
+    transform: scale(1.10, 1.10);
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}

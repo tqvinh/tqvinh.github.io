@@ -10,81 +10,28 @@
 <script>
 import Swal from 'sweetalert2';
 import '../../node_modules/sweetalert2/dist/sweetalert2.min.css';
+import '../data/path.js';
+import { friendsPath, heroesPath } from '../data/path.js';
 var point = 0;
 export default {
     name: 'mainBoard',
     data() {
         return {
-            lstCard: [{
-                    id: 1,
-                },
-                {
-                    id: 2,
-                    path: 'src/assets/image2.jpg'
-                },
-                {
-                    id: 3,
-                    path: 'src/assets/image3.jpg'
-                },
-                {
-                    id: 4,
-                    path: 'src/assets/image4.jpg'
-                },
-                {
-                    id: 5,
-                    path: 'src/assets/image5.jpg'
-                },
-                {
-                    id: 6,
-                    path: 'src/assets/image6.jpg'
-                },
-                {
-                    id: 7,
-                    path: 'src/assets/image7.jpg'
-                },
-                {
-                    id: 8,
-                    path: 'src/assets/image8.jpg'
-                },
-                {
-                    id: 9,
-                    path: 'src/assets/image9.jpg'
-                },
-                {
-                    id: 10,
-                    path: 'src/assets/image10.jpg'
-                },
-                {
-                    id: 11,
-                    path: 'src/assets/image11.jpg'
-                },
-                {
-                    id: 12,
-                    path: 'src/assets/image12.jpg'
-                },
-                {
-                    id: 13,
-                    path: 'src/assets/image13.jpg'
-                },
-                {
-                    id: 14,
-                    path: 'src/assets/image14.jpg'
-                },
-                {
-                    id: 15,
-                    path: 'src/assets/image15.jpg'
-                },
-                {
-                    id: 16,
-                    path: 'src/assets/image16.jpg'
-                }
-            ],
+            lstCard: [],
             scrambledCards: [],
             openedId: 0,
             openedIndex: -1
         }
     },
     created() {
+        //Get path pist by router
+        if(this.$route.params.category=='myfriends'){
+            this.lstCard=friendsPath();
+        }else{
+            this.lstCard=heroesPath();
+        }
+
+
         this.lstCard = this.shuffle(this.lstCard);
         this.scrambledCards = this.lstCard.slice(0, 12).concat(this.lstCard.slice(0, 12));
         this.scrambledCards = this.shuffle(this.scrambledCards);

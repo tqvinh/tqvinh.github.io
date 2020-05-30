@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-    <main-board></main-board>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import mainBoard from './components/MainBoard';
 export default {
-  components:{
-    mainBoard
-  },
   name: 'app',
   data () {
     return {
