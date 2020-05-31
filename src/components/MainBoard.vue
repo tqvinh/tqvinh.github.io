@@ -11,7 +11,13 @@
 import Swal from 'sweetalert2';
 import '../../node_modules/sweetalert2/dist/sweetalert2.min.css';
 import '../data/path.js';
-import { friendsPath, heroesPath } from '../data/path.js';
+import {
+    friendsPath,
+    heroesPath,
+    doraemonPath,
+    dragonballPath,
+    onepunchmanPath
+} from '../data/path.js';
 var point = 0;
 export default {
     name: 'mainBoard',
@@ -24,13 +30,27 @@ export default {
         }
     },
     created() {
+        window.scrollTo({
+            top: 0
+        });
         //Get path pist by router
-        if(this.$route.params.category=='myfriends'){
-            this.lstCard=friendsPath();
-        }else{
-            this.lstCard=heroesPath();
+        switch (this.$route.params.category) {
+            case 'myfriends':
+                this.lstCard = friendsPath();
+                break;
+            case 'aov':
+                this.lstCard = heroesPath();
+                break;
+            case 'doraemon':
+                this.lstCard = doraemonPath();
+                break;
+            case 'dragonball':
+                this.lstCard = dragonballPath();
+                break;
+            case 'onepunchman':
+                this.lstCard = onepunchmanPath();
+                break;
         }
-
 
         this.lstCard = this.shuffle(this.lstCard);
         this.scrambledCards = this.lstCard.slice(0, 12).concat(this.lstCard.slice(0, 12));
@@ -112,6 +132,8 @@ export default {
                         var openedCardBack1 = document.getElementById("myback" + index);
                         var openedCardFront2 = document.getElementById("myfront" + this.openedIndex);
                         var openedCardBack2 = document.getElementById("myback" + this.openedIndex);
+                        this.openedId = 0;
+                        this.openedIndex = -1;
                         setTimeout(function () {
                             openedCardFront1.style.transform = 'rotatey(0deg)';
                             openedCardBack1.style.transform = 'rotatey(0deg)';
@@ -122,8 +144,6 @@ export default {
                             openedCardFront2.style.zIndex = 2;
                             openedCardBack2.style.zIndex = 1;
                         }, 800);
-                        this.openedId = 0;
-                        this.openedIndex = -1;
                     }
                 }
             }

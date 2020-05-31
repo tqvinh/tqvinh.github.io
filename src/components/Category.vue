@@ -53,13 +53,6 @@ export default {
                     "name": "One punch man characters",
                     "imagePath": "src/assets/categories/onepunchman.jpg",
                     "link": "/MainBoard/onepunchman"
-                },
-                {
-                    "id": "6",
-                    "categoryId": 6,
-                    "name": "Random",
-                    "imagePath": "src/assets/categories/mix.png",
-                    "link": "/MainBoard/random"
                 }
             ]
         }
