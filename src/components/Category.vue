@@ -43,16 +43,23 @@ export default {
                 {
                     "id": "4",
                     "categoryId": 4,
-                    "name": "Dragonball characters",
+                    "name": "Dragon Ball characters",
                     "imagePath": "src/assets/categories/dragonball.jpg",
                     "link": "/MainBoard/dragonball"
                 },
                 {
                     "id": "5",
                     "categoryId": 5,
-                    "name": "One punch man characters",
+                    "name": "One Punch Man characters",
                     "imagePath": "src/assets/categories/onepunchman.jpg",
                     "link": "/MainBoard/onepunchman"
+                },
+                {
+                    "id": "6",
+                    "categoryId": 6,
+                    "name": "Marvel characters",
+                    "imagePath": "src/assets/categories/marvel.jpg",
+                    "link": "/MainBoard/marvel"
                 }
             ]
         }

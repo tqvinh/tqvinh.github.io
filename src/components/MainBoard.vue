@@ -16,7 +16,8 @@ import {
     heroesPath,
     doraemonPath,
     dragonballPath,
-    onepunchmanPath
+    onepunchmanPath,
+    marvelPath
 } from '../data/path.js';
 var point = 0;
 export default {
@@ -25,7 +26,7 @@ export default {
         return {
             lstCard: [],
             scrambledCards: [],
-            openedId: 0,
+            openedId: -1,
             openedIndex: -1
         }
     },
@@ -49,6 +50,9 @@ export default {
                 break;
             case 'onepunchman':
                 this.lstCard = onepunchmanPath();
+                break;
+            case 'marvel':
+                this.lstCard = marvelPath();
                 break;
         }
 
@@ -94,7 +98,7 @@ export default {
                 openedCardBack.style.zIndex = 2;
             }
             //logic
-            if (this.openedId == 0 && this.openedIndex == -1) {
+            if (this.openedId == -1 && this.openedIndex == -1) {
                 this.openedId = id;
                 this.openedIndex = index;
             } else {
@@ -110,7 +114,7 @@ export default {
                         openedCardsFront[1].style.visibility = 'hidden';
                         openedCardsBack[0].style.visibility = 'hidden';
                         openedCardsBack[1].style.visibility = 'hidden';
-                        this.openedId = 0;
+                        this.openedId = -1;
                         this.openedIndex = -1;
                         point += 1;
                         if (point == 12) {
@@ -132,7 +136,7 @@ export default {
                         var openedCardBack1 = document.getElementById("myback" + index);
                         var openedCardFront2 = document.getElementById("myfront" + this.openedIndex);
                         var openedCardBack2 = document.getElementById("myback" + this.openedIndex);
-                        this.openedId = 0;
+                        this.openedId = -1;
                         this.openedIndex = -1;
                         setTimeout(function () {
                             openedCardFront1.style.transform = 'rotatey(0deg)';

@@ -1,10 +1,6 @@
 function friendsPath(){
     return [
         {
-            id:0,
-            path: 'src/assets/myfriends/BaQuy.jpg'
-        },
-        {
             id:1,
             path: 'src/assets/myfriends/HaiDang.jpg'
         },
@@ -95,6 +91,10 @@ function friendsPath(){
         {
             id:23,
             path: 'src/assets/myfriends/Vinh3.png'
+        },
+        {
+            id:24,
+            path: 'src/assets/myfriends/BaQuy.jpg'
         }
     ];
 }
@@ -615,10 +615,128 @@ function onepunchmanPath(){
     ];
 }
 
+function marvelPath(){
+    return [
+        {
+            id:1,
+            path: 'src/assets/marvel/antman.jpg'
+        },
+        {
+            id:2,
+            path: 'src/assets/marvel/blackpanther.jpg'
+        },
+        {
+            id:3,
+            path: 'src/assets/marvel/blackwidow.jpg'
+        },
+        {
+            id:4,
+            path: 'src/assets/marvel/captainamerica.jpg'
+        },
+        {
+            id:5,
+            path: 'src/assets/marvel/doctorstrange.jpg'
+        },
+        {
+            id:6,
+            path: 'src/assets/marvel/drax.jpg'
+        },
+        {
+            id:7,
+            path: 'src/assets/marvel/ebonymaw.jpg'
+        },
+        {
+            id:8,
+            path: 'src/assets/marvel/gamora.jpg'
+        },
+        {
+            id:9,
+            path: 'src/assets/marvel/groot.jpg'
+        },
+        {
+            id:10,
+            path: 'src/assets/marvel/hawkeye.jpg'
+        },
+        {
+            id:11,
+            path: 'src/assets/marvel/howardstark.jpg'
+        },
+        {
+            id:12,
+            path: 'src/assets/marvel/hulk.jpg'
+        },
+        {
+            id:13,
+            path: 'src/assets/marvel/ironman.jpg'
+        },
+        {
+            id:14,
+            path: 'src/assets/marvel/ironman2.jpg'
+        },
+        {
+            id:15,
+            path: 'src/assets/marvel/loki.jpg'
+        },
+        {
+            id:16,
+            path: 'src/assets/marvel/nebula.jpg'
+        },
+        {
+            id:17,
+            path: 'src/assets/marvel/nickfury.jpg'
+        },
+        {
+            id:18,
+            path: 'src/assets/marvel/pepperpotts.jpg'
+        },
+        {
+            id:19,
+            path: 'src/assets/marvel/rocketraccoon.jpg'
+        },
+        {
+            id:20,
+            path: 'src/assets/marvel/scarletwitch.jpg'
+        },
+        {
+            id:21,
+            path: 'src/assets/marvel/spiderman.jpg'
+        },
+        {
+            id:22,
+            path: 'src/assets/marvel/starkbuilding.jpg'
+        },
+        {
+            id:23,
+            path: 'src/assets/marvel/starlord.jpg'
+        },
+        {
+            id:24,
+            path: 'src/assets/marvel/thanos.jpg'
+        },
+        {
+            id:25,
+            path: 'src/assets/marvel/thor.jpg'
+        },
+        {
+            id:26,
+            path: 'src/assets/marvel/ultron.jpg'
+        },
+        {
+            id:27,
+            path: 'src/assets/marvel/vision.jpg'
+        },
+        {
+            id:28,
+            path: 'src/assets/marvel/warmachine.jpg'
+        }
+    ];
+}
+
 export{
     friendsPath,
     heroesPath,
     doraemonPath,
     dragonballPath,
-    onepunchmanPath
+    onepunchmanPath,
+    marvelPath
 }
