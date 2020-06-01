@@ -100,24 +100,26 @@ export default {
                 openedCardBack.style.zIndex = 2;
             }
             //logic
-            if (this.openedId == -1 && this.openedIndex == -1) {
+            if (-1 == this.openedId && -1 == this.openedIndex) {
                 this.openedId = id;
                 this.openedIndex = index;
+                console.log('NEW');
             } else {
                 // already opened a card
                 if (index == this.openedIndex) {
                     //do nothing
                 } else {
                     if (id == this.openedId) {
+                        console.log('ĐÚNG');
                         // increase point
+                        this.openedId = -1;
+                        this.openedIndex = -1;
                         var openedCardsFront = document.getElementsByClassName("front" + id);
                         var openedCardsBack = document.getElementsByClassName("back" + id);
                         openedCardsFront[0].style.visibility = 'hidden';
                         openedCardsFront[1].style.visibility = 'hidden';
                         openedCardsBack[0].style.visibility = 'hidden';
                         openedCardsBack[1].style.visibility = 'hidden';
-                        this.openedId = -1;
-                        this.openedIndex = -1;
                         point += 1;
                         if (point == 12) {
                             Swal.fire({
@@ -127,12 +129,13 @@ export default {
                                 showConfirmButton: false,
                                 timer: 3000
                             });
-                            setTimeout(function () {
-                                location.reload();
-                            }, 2500);
+                            // setTimeout(function () {
+                            //     location.reload();
+                            // }, 2500);
 
                         }
                     } else {
+                        console.log('SAI');
                         // false, close both card
                         var openedCardFront1 = document.getElementById("myfront" + index);
                         var openedCardBack1 = document.getElementById("myback" + index);
