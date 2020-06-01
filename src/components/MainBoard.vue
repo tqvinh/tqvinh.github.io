@@ -54,6 +54,8 @@ export default {
             case 'marvel':
                 this.lstCard = marvelPath();
                 break;
+            default:
+                this.lstCard = friendsPath();
         }
 
         this.lstCard = this.shuffle(this.lstCard);
